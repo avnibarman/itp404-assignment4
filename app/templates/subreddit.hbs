@@ -1,0 +1,14 @@
+{{#each model as |d|}}
+  <a href="{{d.data.url}}"><p><strong>{{d.data.title}}</strong> </p></a>
+
+  <p><strong>Score</strong> {{d.data.score}}</p>
+
+  <p><strong>Number of Comments</strong> {{d.data.num_comments}}</p>
+  
+  {{#if d.data.archived}}
+      Archived
+  {{else}}
+      Not Archived
+  {{/if}}
+  <br><br>
+{{/each}}
